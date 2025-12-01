@@ -1,5 +1,8 @@
+com\asistencia\test\TestUsuarioDAO.class
+com\asistencia\dao\UsuarioDAO.class
 com\asistencia\model\Usuario.class
 com\asistencia\test\TestConexion.class
 com\asistencia\model\Asistencia.class
 com\asistencia\util\ConexionDB.class
 com\asistencia\model\Curso.class
+com\asistencia\controller\AuthServlet.class
