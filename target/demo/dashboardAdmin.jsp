@@ -13,7 +13,7 @@
     
     <nav>
         <ul>
-            <li><a href="usuarios">Gestionar Usuarios</a> (Pendiente Paso 8)</li>
+            <li><a href="usuarios">Gestionar Usuarios</a>
             <li><a href="cursos">Gestionar Cursos</a> (Pendiente)</li>
         </ul>
     </nav>

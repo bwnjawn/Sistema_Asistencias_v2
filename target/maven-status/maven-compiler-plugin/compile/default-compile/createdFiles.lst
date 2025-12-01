@@ -1,6 +1,7 @@
 com\asistencia\test\TestUsuarioDAO.class
 com\asistencia\dao\UsuarioDAO.class
 com\asistencia\controller\UsuarioServlet.class
+com\asistencia\filter\AuthFilter.class
 com\asistencia\controller\LogoutServlet.class
 com\asistencia\model\Usuario.class
 com\asistencia\test\TestConexion.class
