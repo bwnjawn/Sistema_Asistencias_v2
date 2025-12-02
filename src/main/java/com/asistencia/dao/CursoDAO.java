@@ -138,5 +138,34 @@ public class CursoDAO {
         }
         return cursos;
     }    
-    
+// --- NUEVO PARA ALUMNO: Listar cursos donde estoy inscrito ---
+    public List<Curso> listarPorAlumno(int idUsuarioAlumno) {
+        List<Curso> cursos = new ArrayList<>();
+        // Unimos: Curso -> Alumno_Curso -> Alumno -> Usuario
+        String sql = "SELECT c.* FROM curso c " +
+                     "INNER JOIN alumno_curso ac ON c.id_curso = ac.id_curso " +
+                     "INNER JOIN alumno a ON ac.id_alumno = a.id_alumno " +
+                     "WHERE a.id_usuario = ? " +
+                     "ORDER BY c.nombre_curso ASC";
+        
+        try (Connection conn = ConexionDB.getInstance().getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            pstmt.setInt(1, idUsuarioAlumno);
+            
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    Curso c = new Curso();
+                    c.setIdCurso(rs.getInt("id_curso"));
+                    c.setCodigoCurso(rs.getString("codigo_curso"));
+                    c.setNombreCurso(rs.getString("nombre_curso"));
+                    c.setDescripcion(rs.getString("descripcion"));
+                    cursos.add(c);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return cursos;
+    }
 }

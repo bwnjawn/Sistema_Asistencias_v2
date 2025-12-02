@@ -4,20 +4,20 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard Alumno</title>
+    <title>Panel de Alumno</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h2>Bienvenido Alumno: ${usuario.nombre}</h2>
+    <h2>Bienvenido Alumno: <c:out value="${usuario.nombre}" /></h2>
     <hr>
     
     <nav>
         <ul>
-            <li><a href="asistencia?accion=historial">Mi Historial de Asistencia</a> (Pendiente Paso 12)</li>
+            <li><a href="asistencia?accion=mis_ramos">Ver Mis Ramos y Asistencia</a></li>
         </ul>
     </nav>
     
-    <br>
+    <br><br>
     <a href="logout">Cerrar Sesión</a>
 </body>
 </html>

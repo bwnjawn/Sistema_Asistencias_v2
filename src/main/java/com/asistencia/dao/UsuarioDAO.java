@@ -153,4 +153,64 @@ public class UsuarioDAO {
             return false;
         }
     }
+// --- 7. LISTAR SOLO ALUMNOS (Rol 3) ---
+    // ESTE ES EL METODO QUE TE FALTA
+    public List<Usuario> selectAlumnos() {
+        List<Usuario> alumnos = new ArrayList<>();
+        // Asumiendo que el rol 3 es "Alumno" en tu BD
+        String sql = "SELECT * FROM usuario WHERE id_rol = 3 ORDER BY apellido ASC";
+        
+        try (Connection conn = ConexionDB.getInstance().getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery()) {
+            
+            while (rs.next()) {
+                Usuario u = new Usuario();
+                u.setIdUsuario(rs.getInt("id_usuario"));
+                u.setRut(rs.getString("rut"));
+                u.setNombre(rs.getString("nombre"));
+                u.setApellido(rs.getString("apellido"));
+                u.setEmail(rs.getString("email"));
+                // No necesitamos la contraseña para la lista
+                u.setIdRol(rs.getInt("id_rol"));
+                alumnos.add(u);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return alumnos;
+    }
+// --- 7. LISTAR ALUMNOS INSCRITOS EN UN CURSO ESPECÍFICO ---
+    public List<Usuario> listarAlumnosPorCurso(int idCurso) {
+        List<Usuario> alumnos = new ArrayList<>();
+        // Esta consulta es la clave: Une las 3 tablas para filtrar
+        String sql = "SELECT u.* " +
+                     "FROM usuario u " +
+                     "INNER JOIN alumno a ON u.id_usuario = a.id_usuario " +
+                     "INNER JOIN alumno_curso ac ON a.id_alumno = ac.id_alumno " +
+                     "WHERE ac.id_curso = ? " +
+                     "ORDER BY u.apellido ASC";
+        
+        try (Connection conn = ConexionDB.getInstance().getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            
+            pstmt.setInt(1, idCurso);
+            
+            try (ResultSet rs = pstmt.executeQuery()) {
+                while (rs.next()) {
+                    Usuario u = new Usuario();
+                    u.setIdUsuario(rs.getInt("id_usuario"));
+                    u.setRut(rs.getString("rut"));
+                    u.setNombre(rs.getString("nombre"));
+                    u.setApellido(rs.getString("apellido"));
+                    u.setEmail(rs.getString("email"));
+                    u.setIdRol(rs.getInt("id_rol"));
+                    alumnos.add(u);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return alumnos;
+    }
 }

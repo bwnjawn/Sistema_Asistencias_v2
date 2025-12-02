@@ -2,29 +2,32 @@ package com.asistencia.model;
 
 public class Curso {
     private int idCurso;
-    private String codigoCurso;  // Antes 'codigo'
-    private String nombreCurso;  // Antes 'nombre'
-    private String descripcion;  // Nuevo campo
+    private String codigoCurso;
+    private String nombreCurso;
+    private String descripcion;
+    
+    // Campo extra para estadísticas (no va en la BD)
+    private int porcentajeAsistencia; 
 
-    // Constructor vacío
+    // 1. Constructor Vacío (Obligatorio)
     public Curso() { }
 
-    // Constructor completo
-    public Curso(int idCurso, String codigoCurso, String nombreCurso, String descripcion) {
-        this.idCurso = idCurso;
-        this.codigoCurso = codigoCurso;
-        this.nombreCurso = nombreCurso;
-        this.descripcion = descripcion;
-    }
-
-    // Constructor sin ID (para insertar)
+    // 2. Constructor para INSERTAR (Sin ID)
     public Curso(String codigoCurso, String nombreCurso, String descripcion) {
         this.codigoCurso = codigoCurso;
         this.nombreCurso = nombreCurso;
         this.descripcion = descripcion;
     }
 
-    // Getters y Setters
+    // 3. Constructor COMPLETO (Con ID) <-- ESTE ES EL QUE TE FALTABA
+    public Curso(int idCurso, String codigoCurso, String nombreCurso, String descripcion) {
+        this.idCurso = idCurso;
+        this.codigoCurso = codigoCurso;
+        this.nombreCurso = nombreCurso;
+        this.descripcion = descripcion;
+    }
+    
+    // --- Getters y Setters ---
     public int getIdCurso() { return idCurso; }
     public void setIdCurso(int idCurso) { this.idCurso = idCurso; }
 
@@ -36,4 +39,7 @@ public class Curso {
 
     public String getDescripcion() { return descripcion; }
     public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
+
+    public int getPorcentajeAsistencia() { return porcentajeAsistencia; }
+    public void setPorcentajeAsistencia(int porcentajeAsistencia) { this.porcentajeAsistencia = porcentajeAsistencia; }
 }
