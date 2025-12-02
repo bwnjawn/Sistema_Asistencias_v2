@@ -28,3 +28,17 @@
 0:0:0:0:0:0:0:1 - - [30/Nov/2025:19:09:25 -0300] "GET /login.jsp HTTP/1.1" 200 4501 http-bio-8081-exec-10 0
 0:0:0:0:0:0:0:1 - - [30/Nov/2025:19:09:25 -0300] "GET /Img/Logo.png HTTP/1.1" 404 975 http-bio-8081-exec-10 0
 0:0:0:0:0:0:0:1 - - [30/Nov/2025:19:09:43 -0300] "POST /auth HTTP/1.1" 404 959 http-bio-8081-exec-10 1
+0:0:0:0:0:0:0:1 - - [30/Nov/2025:22:40:17 -0300] "GET / HTTP/1.1" 200 335 http-bio-8081-exec-1 469
+0:0:0:0:0:0:0:1 - - [30/Nov/2025:22:40:17 -0300] "GET /style.css HTTP/1.1" 200 5530 http-bio-8081-exec-2 4
+0:0:0:0:0:0:0:1 - - [30/Nov/2025:22:40:17 -0300] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8081-exec-4 10
+0:0:0:0:0:0:0:1 - - [30/Nov/2025:22:40:17 -0300] "GET /Img/mainpagefondo.png HTTP/1.1" 200 10045592 http-bio-8081-exec-3 71
+0:0:0:0:0:0:0:1 - - [30/Nov/2025:22:40:19 -0300] "GET /login.jsp HTTP/1.1" 200 7230 http-bio-8081-exec-6 72
+0:0:0:0:0:0:0:1 - - [30/Nov/2025:22:40:19 -0300] "GET /Img/Logo.png HTTP/1.1" 404 975 http-bio-8081-exec-5 2
+0:0:0:0:0:0:0:1 - - [30/Nov/2025:22:40:19 -0300] "GET /script.js HTTP/1.1" 200 632 http-bio-8081-exec-7 3
+0:0:0:0:0:0:0:1 - - [30/Nov/2025:22:40:52 -0300] "POST /auth HTTP/1.1" 302 - http-bio-8081-exec-10 2884
+0:0:0:0:0:0:0:1 - - [30/Nov/2025:22:40:52 -0300] "GET /index.jsp HTTP/1.1" 200 446 http-bio-8081-exec-10 1
+0:0:0:0:0:0:0:1 - - [30/Nov/2025:22:40:52 -0300] "GET /style.css HTTP/1.1" 304 - http-bio-8081-exec-2 1
+0:0:0:0:0:0:0:1 - - [30/Nov/2025:22:40:52 -0300] "GET /Img/mainpagefondo.png HTTP/1.1" 304 - http-bio-8081-exec-4 2
+0:0:0:0:0:0:0:1 - - [30/Nov/2025:22:41:02 -0300] "GET /login.jsp HTTP/1.1" 200 7230 http-bio-8081-exec-6 2
+0:0:0:0:0:0:0:1 - - [30/Nov/2025:22:41:02 -0300] "GET /script.js HTTP/1.1" 304 - http-bio-8081-exec-6 1
+0:0:0:0:0:0:0:1 - - [30/Nov/2025:22:41:02 -0300] "GET /Img/Logo.png HTTP/1.1" 404 975 http-bio-8081-exec-7 4
