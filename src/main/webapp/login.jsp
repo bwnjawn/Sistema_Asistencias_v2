@@ -18,7 +18,7 @@
         Como movimos los archivos a la misma carpeta (src/main/webapp), 
         ahora podemos llamar a 'style.css' directamente sin rutas complejas.
     -->
-    <link rel="stylesheet" href="login-style.css">
+    <link rel="stylesheet" href="styles/login-style.css">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); 
