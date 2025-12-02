@@ -32,7 +32,7 @@ header{
     padding: 10px 40px;
     background: var(--color-secundario);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     z-index: 99;
 }
@@ -40,10 +40,16 @@ header{
 .logo-header {
     width: 200px;
     height: 60px;
-    background-image: url('../Img/Logo.png');
+    background-image: url('Img/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left center;
+}
+
+.navegacion {
+    margin-left: auto; /* Empuja este elemento lo más a la derecha posible */
+    display: flex; /* Asegura que los elementos internos sigan alineados */
+    align-items: center;
 }
 
 .navegacion a {
@@ -90,6 +96,40 @@ header{
 .navegacion .btnLogin-popup:hover{
     background: var(--color-primario);
     color: var(--color-letras);
+}
+
+.grupo-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-back {
+    margin-left: 0;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: var(--color-letras);
+    font-weight: 500;
+    display:flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 5px; 
+    transition: .5s;
+}
+
+.btn-back:hover {
+    color: var(--color-primario); /* Cambia el color del texto ("Volver") */
+}
+
+.btn-back:hover ion-icon {
+    /* Selecciona el icono dentro del botón al hacer hover en el botón */
+    color: var(--color-blanco); /* Cambia el color del icono */
 }
 
 /* body */
@@ -183,8 +223,6 @@ body {
     width: 100%;
     padding: 40px;
 }
-
-
 
 .form-box {
     font-size: 1.5em;

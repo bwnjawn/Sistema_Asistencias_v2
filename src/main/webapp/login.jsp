@@ -18,20 +18,26 @@
         Como movimos los archivos a la misma carpeta (src/main/webapp), 
         ahora podemos llamar a 'style.css' directamente sin rutas complejas.
     -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login-style.css">
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); 
     </style>
 </head>
+
 <body class="paleta">
     <header>
+    <div class="grupo-izquierda">
+        <button onclick="history.back()" class="btn-back">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+        </button> 
         <a href="#" class="logo-header"></a>
+    </div>
         <nav class="navegacion">
-            <a href="#">Inicio</a>
-            <button class="btnLogin-popup">Ingresar</button>
-        </nav>
-    </header>
+        <a href="#">Inicio</a>
+        <button class="btnLogin-popup">Ingresar</button>
+    </nav>
+</header>
 
     <!-- ================= ZONA DE MENSAJES (Lógica Java) ================= -->
     <!-- 
