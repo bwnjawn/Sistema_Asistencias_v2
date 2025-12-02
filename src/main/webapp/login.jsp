@@ -21,32 +21,7 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-        
-        /* CAMBIO 3: Ajuste de Altura.
-           Se aumentó la altura del cuadro de registro (.wrapper.active) a 620px
-           para que quepan los nuevos campos (RUT, Nombre, Apellido) sin romperse. 
-        */
-        .wrapper.active { height: 620px; }
-        
-        /* CAMBIO 4: Estilos para Alertas.
-           Se agregaron clases CSS para mostrar mensajes de éxito (verde) o error (rojo)
-           que vienen desde el servidor Java.
-        */
-        .alert {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 15px;
-            border-radius: 5px;
-            z-index: 1000;
-            color: white;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .alert-error { background-color: #ff4444; }
-        .alert-success { background-color: #00C851; }
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); 
     </style>
 </head>
 <body class="paleta">

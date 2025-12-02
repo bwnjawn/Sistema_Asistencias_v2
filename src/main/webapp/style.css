@@ -103,6 +103,23 @@ body {
     background-position: center;
 }
 
+.alert {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.alert-error { background-color: #ff4444; }
+
+.alert-success { background-color: #00C851; }
+
 .wrapper {
     position: relative;
     width: 400px;
@@ -119,9 +136,7 @@ body {
     transform: scale(0);
 }
 
-.wrapper.active {
-    height: 520px;
-}
+.wrapper.active { height: 640px; }
 
 .wrapper.active-popup{
     transform: scale(1);

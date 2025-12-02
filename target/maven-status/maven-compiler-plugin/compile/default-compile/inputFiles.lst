@@ -1,15 +1,15 @@
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\controller\AsistenciaServlet.java
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\dao\CursoDAO.java
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\model\Usuario.java
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\controller\LogoutServlet.java
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\controller\CursoServlet.java
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\controller\UsuarioServlet.java
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\dao\AsistenciaDAO.java
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\filter\AuthFilter.java
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\model\Asistencia.java
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\util\ConexionDB.java
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\model\Curso.java
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\controller\AuthServlet.java
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\test\TestUsuarioDAO.java
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\dao\UsuarioDAO.java
-C:\Users\benja\Downloads\borrar PC1\Programacion Avanzada- Sistema de Asistencias v2\Sistema Asistencias V2\src\main\java\com\asistencia\test\TestConexion.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\controller\LogoutServlet.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\dao\AsistenciaDAO.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\controller\UsuarioServlet.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\model\Curso.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\controller\CursoServlet.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\util\ConexionDB.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\model\Asistencia.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\dao\CursoDAO.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\filter\AuthFilter.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\test\TestConexion.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\controller\AsistenciaServlet.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\dao\UsuarioDAO.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\model\Usuario.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\controller\AuthServlet.java
+C:\Users\crisl\Desktop\la u\202520\programacion avanzada\solemne final\Sistema_Asistencias_v2\src\main\java\com\asistencia\test\TestUsuarioDAO.java

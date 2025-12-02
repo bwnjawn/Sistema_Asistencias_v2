@@ -168,3 +168,8 @@
 0:0:0:0:0:0:0:1 - - [02/Dec/2025:14:27:59 -0300] "GET /dashboardAlumno.jsp HTTP/1.1" 200 454 http-bio-8081-exec-6 32
 0:0:0:0:0:0:0:1 - - [02/Dec/2025:14:28:05 -0300] "GET /asistencia?accion=mis_ramos HTTP/1.1" 200 4404 http-bio-8081-exec-7 3931
 0:0:0:0:0:0:0:1 - - [02/Dec/2025:14:28:12 -0300] "GET /asistencia?accion=ver_detalle&idCurso=2 HTTP/1.1" 200 3509 http-bio-8081-exec-8 1821
+0:0:0:0:0:0:0:1 - - [02/Dec/2025:15:07:44 -0300] "GET / HTTP/1.1" 200 335 http-bio-8081-exec-1 56
+0:0:0:0:0:0:0:1 - - [02/Dec/2025:15:07:44 -0300] "GET /style.css HTTP/1.1" 200 5530 http-bio-8081-exec-2 4
+0:0:0:0:0:0:0:1 - - [02/Dec/2025:15:07:44 -0300] "GET /Img/mainpagefondo.png HTTP/1.1" 304 - http-bio-8081-exec-3 6
+0:0:0:0:0:0:0:1 - - [02/Dec/2025:15:07:47 -0300] "GET /login.jsp HTTP/1.1" 200 7230 http-bio-8081-exec-4 395
+0:0:0:0:0:0:0:1 - - [02/Dec/2025:15:07:47 -0300] "GET /Img/Logo.png HTTP/1.1" 404 975 http-bio-8081-exec-5 3
