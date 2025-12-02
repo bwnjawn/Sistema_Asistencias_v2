@@ -14,7 +14,7 @@
     <nav>
         <ul>
             <li><a href="usuarios">Gestionar Usuarios</a>
-            <li><a href="cursos">Gestionar Cursos</a> (Pendiente)</li>
+            <li><a href="cursos">Gestionar Cursos</a> <li><a href="cursos">Gestionar Cursos</a></li></li>
         </ul>
     </nav>
     

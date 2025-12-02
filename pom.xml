@@ -13,9 +13,10 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <!-- Configuración para compatibilidad con Tomcat 7 -->
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
+    <!-- Objetivo: actualizar runtime a Java 21 (LTS) -->
+    <maven.compiler.source>21</maven.compiler.source>
+    <maven.compiler.target>21</maven.compiler.target>
+    <maven.compiler.release>21</maven.compiler.release>
   </properties>
 
   <dependencies>
@@ -53,10 +54,13 @@
   <build>
     <finalName>demo</finalName>
     <plugins>
-      <!-- Plugin de Compilación -->
+      <!-- Plugin de Compilación: configurar release para Java 21 -->
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.1</version>
+        <version>3.11.0</version>
+        <configuration>
+          <release>${maven.compiler.release}</release>
+        </configuration>
       </plugin>
       
       <!-- Plugin de Servidor Tomcat 7 (Puerto 8081) -->

@@ -2,34 +2,38 @@ package com.asistencia.model;
 
 public class Curso {
     private int idCurso;
-    private String codigo;      // Ej: PGY4121
-    private String nombre;      // Ej: Programación Java
-    private int idProfesor;     // ID del usuario profesor asignado
+    private String codigoCurso;  // Antes 'codigo'
+    private String nombreCurso;  // Antes 'nombre'
+    private String descripcion;  // Nuevo campo
 
+    // Constructor vacío
     public Curso() { }
 
-    public Curso(int idCurso, String codigo, String nombre, int idProfesor) {
+    // Constructor completo
+    public Curso(int idCurso, String codigoCurso, String nombreCurso, String descripcion) {
         this.idCurso = idCurso;
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.idProfesor = idProfesor;
+        this.codigoCurso = codigoCurso;
+        this.nombreCurso = nombreCurso;
+        this.descripcion = descripcion;
     }
 
-    public Curso(String codigo, String nombre, int idProfesor) {
-        this.codigo = codigo;
-        this.nombre = nombre;
-        this.idProfesor = idProfesor;
+    // Constructor sin ID (para insertar)
+    public Curso(String codigoCurso, String nombreCurso, String descripcion) {
+        this.codigoCurso = codigoCurso;
+        this.nombreCurso = nombreCurso;
+        this.descripcion = descripcion;
     }
 
+    // Getters y Setters
     public int getIdCurso() { return idCurso; }
     public void setIdCurso(int idCurso) { this.idCurso = idCurso; }
 
-    public String getCodigo() { return codigo; }
-    public void setCodigo(String codigo) { this.codigo = codigo; }
+    public String getCodigoCurso() { return codigoCurso; }
+    public void setCodigoCurso(String codigoCurso) { this.codigoCurso = codigoCurso; }
 
-    public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
+    public String getNombreCurso() { return nombreCurso; }
+    public void setNombreCurso(String nombreCurso) { this.nombreCurso = nombreCurso; }
 
-    public int getIdProfesor() { return idProfesor; }
-    public void setIdProfesor(int idProfesor) { this.idProfesor = idProfesor; }
+    public String getDescripcion() { return descripcion; }
+    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
 }

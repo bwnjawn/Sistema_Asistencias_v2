@@ -54,7 +54,6 @@ public class AuthServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("usuario", usuario); 
 
-            // Redirección con LOGS para ver qué camino toma
             switch (usuario.getIdRol()) {
                 case 1: 
                     System.out.println("Redirigiendo a Dashboard ADMIN...");
@@ -62,7 +61,8 @@ public class AuthServlet extends HttpServlet {
                     break;
                 case 2: 
                     System.out.println("Redirigiendo a Dashboard PROFESOR...");
-                    response.sendRedirect("dashboardProfesor.jsp");
+                    // CAMBIO AQUÍ: Redirigimos al Servlet para cargar los cursos antes de mostrar la vista
+                    response.sendRedirect("cursos?accion=mis_cursos");
                     break;
                 case 3: 
                     System.out.println("Redirigiendo a Dashboard ALUMNO...");
@@ -90,6 +90,7 @@ public class AuthServlet extends HttpServlet {
         String email = request.getParameter("email");
         String pass = request.getParameter("password");
         
+        // Por defecto rol 3 (Alumno)
         Usuario nuevoUsuario = new Usuario(rut, nombre, apellido, email, pass, 3);
         boolean registrado = usuarioDAO.insert(nuevoUsuario);
 
