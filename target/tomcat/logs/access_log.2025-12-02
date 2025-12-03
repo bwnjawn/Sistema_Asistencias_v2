@@ -1,0 +1,8 @@
+0:0:0:0:0:0:0:1 - - [02/Dec/2025:23:35:43 -0300] "GET / HTTP/1.1" 200 335 http-bio-8081-exec-1 310
+0:0:0:0:0:0:0:1 - - [02/Dec/2025:23:35:45 -0300] "GET /login.jsp HTTP/1.1" 200 7230 http-bio-8081-exec-2 47
+0:0:0:0:0:0:0:1 - - [02/Dec/2025:23:35:45 -0300] "GET /Img/Logo.png HTTP/1.1" 404 975 http-bio-8081-exec-4 3
+0:0:0:0:0:0:0:1 - - [02/Dec/2025:23:35:56 -0300] "POST /auth HTTP/1.1" 302 - http-bio-8081-exec-5 1692
+0:0:0:0:0:0:0:1 - - [02/Dec/2025:23:35:56 -0300] "GET /dashboardProfesor.jsp HTTP/1.1" 200 465 http-bio-8081-exec-6 147
+0:0:0:0:0:0:0:1 - - [02/Dec/2025:23:35:59 -0300] "GET /asistencia?accion=listarCursos HTTP/1.1" 200 725 http-bio-8081-exec-7 1484
+0:0:0:0:0:0:0:1 - - [02/Dec/2025:23:36:36 -0300] "GET /dashboardProfesor.jsp HTTP/1.1" 200 465 http-bio-8081-exec-8 2
+0:0:0:0:0:0:0:1 - - [02/Dec/2025:23:36:39 -0300] "GET /asistencia?accion=listarCursos HTTP/1.1" 200 725 http-bio-8081-exec-9 1421

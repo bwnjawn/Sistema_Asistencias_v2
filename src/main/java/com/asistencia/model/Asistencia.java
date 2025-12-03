@@ -1,41 +1,47 @@
 package com.asistencia.model;
 
-import java.sql.Date;
-
 public class Asistencia {
     private int idAsistencia;
-    private int idCurso;
-    private int idAlumno;
-    private Date fecha;
-    private boolean presente;
+    private int idAlumnoCurso; // Asegúrate que este nombre coincida con tu versión anterior
+    private String fecha;      // O java.sql.Date, según como lo tengas
+    private String estado;     // Presente/Ausente
     
-    // Campo auxiliar para mostrar el nombre del curso en los reportes (No está en la tabla asistencia)
-    private String nombreCursoAux;
+    // --- NUEVO CAMPO ---
+    private String bloque; 
 
-    public Asistencia() { }
+    public Asistencia() {}
 
-    public Asistencia(int idCurso, int idAlumno, Date fecha, boolean presente) {
-        this.idCurso = idCurso;
-        this.idAlumno = idAlumno;
+    // Constructor completo actualizado
+    public Asistencia(int idAsistencia, int idAlumnoCurso, String fecha, String estado, String bloque) {
+        this.idAsistencia = idAsistencia;
+        this.idAlumnoCurso = idAlumnoCurso;
         this.fecha = fecha;
-        this.presente = presente;
+        this.estado = estado;
+        this.bloque = bloque;
     }
 
+    // Constructor sin ID (para insertar) actualizado
+    public Asistencia(int idAlumnoCurso, String fecha, String estado, String bloque) {
+        this.idAlumnoCurso = idAlumnoCurso;
+        this.fecha = fecha;
+        this.estado = estado;
+        this.bloque = bloque;
+    }
+
+    // Getters y Setters existentes...
     public int getIdAsistencia() { return idAsistencia; }
     public void setIdAsistencia(int idAsistencia) { this.idAsistencia = idAsistencia; }
 
-    public int getIdCurso() { return idCurso; }
-    public void setIdCurso(int idCurso) { this.idCurso = idCurso; }
+    public int getIdAlumnoCurso() { return idAlumnoCurso; }
+    public void setIdAlumnoCurso(int idAlumnoCurso) { this.idAlumnoCurso = idAlumnoCurso; }
 
-    public int getIdAlumno() { return idAlumno; }
-    public void setIdAlumno(int idAlumno) { this.idAlumno = idAlumno; }
+    public String getFecha() { return fecha; }
+    public void setFecha(String fecha) { this.fecha = fecha; }
 
-    public Date getFecha() { return fecha; }
-    public void setFecha(Date fecha) { this.fecha = fecha; }
+    public String getEstado() { return estado; }
+    public void setEstado(String estado) { this.estado = estado; }
 
-    public boolean isPresente() { return presente; }
-    public void setPresente(boolean presente) { this.presente = presente; }
-
-    public String getNombreCursoAux() { return nombreCursoAux; }
-    public void setNombreCursoAux(String nombreCursoAux) { this.nombreCursoAux = nombreCursoAux; }
+    // --- NUEVOS GETTER Y SETTER PARA BLOQUE ---
+    public String getBloque() { return bloque; }
+    public void setBloque(String bloque) { this.bloque = bloque; }
 }
