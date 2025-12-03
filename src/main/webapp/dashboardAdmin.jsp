@@ -21,10 +21,8 @@
         </div>
     </header>
 
-        <div class="mensaje-bienvenida">
-            <h2>Bienvenido Administrador: ${usuario.nombre}</h2>
-        </div>
-        <a href="logout" class="logout-link">Cerrar Sesión</a>
+    <div class="mensaje-bienvenida">
+        <h2>Bienvenido Administrador: ${usuario.nombre}</h2>
     </div>
     
     <hr>
@@ -35,7 +33,7 @@
             <li><a href="cursos">Gestionar Cursos</a> <li><a href="cursos">Gestionar Cursos</a></li></li>
         </ul>
     </div>
-
+<a href="logout" class="logout-link">Cerrar Sesión</a>
 
 </body>
 </html>
