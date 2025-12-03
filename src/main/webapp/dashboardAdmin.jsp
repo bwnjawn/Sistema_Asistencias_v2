@@ -26,13 +26,12 @@
         <h2>Bienvenido Administrador: ${usuario.nombre}</h2>
     </div>
     <hr>
-
     <div class="navegacion">
         <ul>
-            <li><a href="usuarios">Gestionar Usuarios</a></li>
-            <li><a href="cursos">Gestionar Cursos</a></li>
+            <a href="usuarios">Gestionar Usuarios</a>
+            <a href="cursos">Gestionar Cursos</a>
         </ul>
     </div>
 
-    </body>
+</body>
 </html>

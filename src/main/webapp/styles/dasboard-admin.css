@@ -19,7 +19,8 @@
     --color-letras: rgb(0, 0, 0);
     --color-primario: rgb(86, 130, 177); 
     --color-secundario: rgb(115, 158, 201);
-    --color-fondo: rgb(250, 217, 198); 
+    --color-fondo: rgb(252, 235, 225);
+    --color-bordeboton: rgb(27, 65, 106);
     --color-blanco: #fff;
     --color-hover: #e0e0e0; /* Gris claro para hover */
     --color-exito: #00C851; /* Verde para acciones de éxito */
@@ -29,7 +30,7 @@
 body {
     background-color: var(--color-fondo);
     color: var(--color-primario);
-    padding-top: 60px; /* Espacio para el header fijo */
+    padding-top: 90px; /* Espacio para el header fijo */
     min-height: 100vh;
 }
 
@@ -54,10 +55,22 @@ header{
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.grupo-izquierda {
+    display: flex; 
+    align-items: center;
+    flex-grow: 0; 
+}
+
+.grupo-derecha {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
+}
+
 .logo-header {
     width: 200px;
     height: 60px;
-    background-image: url('Img/logo.png');
+    background-image: url('../Img/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left center;
@@ -65,21 +78,56 @@ header{
 
 .btn-logout {
     text-decoration: none;
-    color: var(--color-letras);
+    color: var(--color-blanco);
     padding: 5px 15px;
-    background-color: var(--color-fondo); 
-    border-radius: 5px;
+    background-color: var(--color-primario);
+    border-radius: 6px;
+    border: 2px solid var(--color-bordeboton);
     font-weight: 600;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .btn-logout:hover {
-    background-color: var(--color-letras); 
+    background-color: var(--color-bordeboton); 
     color: var(--color-blanco);
 }
 
-.btn-back {
-    display: none;
+.mensaje-bienvenida {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--color-primario);
+    text-align: center;
+}
+
+.navegacion {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.navegacion a {
+    position: relative;
+    font-size: 1.1em;
+    color: var(--color-letras);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navegacion a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: var(--color-primario);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navegacion a:hover:after{
+    transform: scaleX(1);
 }
 
 .alert {
