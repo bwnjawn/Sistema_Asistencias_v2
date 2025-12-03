@@ -26,6 +26,7 @@
         <h2>Bienvenido Administrador: ${usuario.nombre}</h2>
     </div>
     <hr>
+    
     <div class="navegacion">
         <ul>
             <a href="usuarios">Gestionar Usuarios</a>
