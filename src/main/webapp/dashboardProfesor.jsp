@@ -5,9 +5,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard Profesor</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles/dasboard.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); 
+    </style>
 </head>
-<body>
+
+<body class="paleta">
     <h2>Bienvenido Profesor: <c:out value="${usuario.nombre}" /> <c:out value="${usuario.apellido}" /></h2>
     <hr>
     

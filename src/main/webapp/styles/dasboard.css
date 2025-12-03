@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.raleway{
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+
+:root { /* Usamos :root para que las variables sean globales */
+    --color-letras: rgb(0, 0, 0);
+    --color-primario: rgb(86, 130, 177); 
+    --color-secundario: rgb(115, 158, 201);
+    --color-fondo: rgb(250, 217, 198); 
+    --color-blanco: #fff;
+    --color-hover: #e0e0e0; /* Gris claro para hover */
+    --color-exito: #00C851; /* Verde para acciones de éxito */
+}
+
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-letras);
+    padding-top: 60px; /* Espacio para el header fijo */
+    min-height: 100vh;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-primario), rgba(0, 0, 0, 0));
+    margin-bottom: 20px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 40px;
+    background: var(--color-secundario);
+    display: flex;
+    justify-content: space-between; /* Alinear logo a la izquierda y nav a la derecha */
+    align-items: center;
+    z-index: 99;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.grupo-izquierda {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo-header {
+    width: 200px;
+    height: 60px;
+    background-image: url('../Img/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.btn-back {
+    margin-left: 0;
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: var(--color-letras);
+    font-weight: 500;
+    display:flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 5px; 
+    transition: .5s;
+}
+
+.btn-back:hover {
+    color: var(--color-primario); /* Cambia el color del texto ("Volver") */
+}
+
+.btn-back:hover ion-icon {
+    /* Selecciona el icono dentro del botón al hacer hover en el botón */
+    color: var(--color-blanco); /* Cambia el color del icono */
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert-error {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+}
