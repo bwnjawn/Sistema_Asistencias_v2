@@ -37,18 +37,18 @@ header{
     z-index: 99;
 }
 
-barraInf{
-    position: fixed; 
+.barraInf{
+    position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    /* Usa un color de tu paleta para el fondo (usamos el color secundario como el header) */
-    background: var(--color-secundario); 
-    color: var(--color-letras); /* Color de texto (negro o el que uses) */
+    background: var(--color-primario); 
+    padding: 10px 40px;
+    color: var(--color-blanco);
     text-align: center;
-    padding: 10px 0;
     font-size: 0.9em;
-    z-index: 100;
+    font-weight: 500;
+    z-index: 98;
 }
 
 .logo-header {
@@ -166,7 +166,7 @@ body {
     transform: translate(-50%, -50%); /* Centra el elemento exactamente */
     text-align: center;
     color: var(--color-blanco); /* Letras blancas para contrastar con el fondo oscuro */
-    z-index: 10; /* Asegura que esté por encima del overlay y del wrapper */
+    z-index: 100; /* Asegura que esté por encima del overlay y del wrapper */
     pointer-events: none; /* Permite hacer clic a través del texto si es necesario (ej: al wrapper) */
     width: 80%; /* Limita el ancho del texto */
     max-width: 800px;
@@ -215,6 +215,7 @@ body::before {
     overflow: hidden;
     transition: transform .5s ease, height .2s ease;
     transform: scale(0);
+    z-index: 101;
 }
 
 .wrapper.active { height: 640px; }
