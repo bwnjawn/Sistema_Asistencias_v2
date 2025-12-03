@@ -55,20 +55,6 @@ header{
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 40px;
-    background: var(--color-secundario);
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    z-index: 99;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
 .grupo-izquierda {
     display: flex; 
     align-items: center;
@@ -104,6 +90,44 @@ header{
 .btn-logout:hover {
     background-color: var(--color-bordeboton); 
     color: var(--color-blanco);
+}
+
+.mensaje-bienvenida {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--color-primario);
+    text-align: center;
+}
+
+.navegacion {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.navegacion a {
+    position: relative;
+    font-size: 1.1em;
+    color: var(--color-letras);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navegacion a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: var(--color-primario);
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navegacion a:hover:after{
+    transform: scaleX(1);
 }
 
 .alert {

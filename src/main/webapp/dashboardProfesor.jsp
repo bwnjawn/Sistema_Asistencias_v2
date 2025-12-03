@@ -5,15 +5,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard Profesor</title>
-    <link rel="stylesheet" type="text/css" href="styles/dasboard.css">
+    <link rel="stylesheet" type="text/css" href="styles/dashboard-profe.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); 
     </style>
 </head>
 
 <body class="paleta">
-    <h2>Bienvenido Profesor: <c:out value="${usuario.nombre}" /> <c:out value="${usuario.apellido}" /></h2>
+    <header>
+        <div class="grupo-izquierda">
+            <a href="#" class="logo-header"></a>
+        </div>
+
+        <div class="grupo-derecha">
+            <a href="logout" class="btn-logout">Cerrar Sesión</a>
+        </div>
+    </header>
+
+    <div class="mensaje-bienvenida">
+        <h2>Bienvenido Profesor: <c:out value="${usuario.nombre}" /> <c:out value="${usuario.apellido}" /></h2>
+    </div>
     <hr>
+    
+    <div class="navegacion">
+        <ul>
+            <a href="cursos?accion=mis_cursos">Ver Mis Cursos</a>
+        </ul>
+    </div>
     
     <h3>Mis Cursos Asignados</h3>
 
