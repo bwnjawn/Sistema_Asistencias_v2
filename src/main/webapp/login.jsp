@@ -13,11 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sistema de Asistencia</title>
     
-    <!-- 
-        CAMBIO 2: Rutas Relativas.
-        Como movimos los archivos a la misma carpeta (src/main/webapp), 
-        ahora podemos llamar a 'style.css' directamente sin rutas complejas.
-    -->
     <link rel="stylesheet" href="styles/login-style.css">
     
     <style>

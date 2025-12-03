@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Dashboard Administrador</title>
-    <link rel="stylesheet" type="text/css" href="styles/dasboard.css">
+    <link rel="stylesheet" type="text/css" href="styles/dasboard-admin.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); 
     </style>
@@ -13,27 +13,26 @@
 
 <body class="paleta">
     <header>
-        <div class="grupo-izquierda">
-            <button onclick="history.back()" class="btn-back">
-                <ion-icon name="arrow-back-circle-outline"></ion-icon>
-            </button> 
+        <div class="grupo-izquierda">
             <a href="#" class="logo-header"></a>
+        </div>
+
+        <div class="grupo-derecha">
+            <a href="logout" class="btn-logout">Cerrar Sesión</a>
         </div>
     </header>
 
     <div class="mensaje-bienvenida">
         <h2>Bienvenido Administrador: ${usuario.nombre}</h2>
     </div>
-    
     <hr>
 
     <div class="navegacion">
         <ul>
-            <li><a href="usuarios">Gestionar Usuarios</a>
-            <li><a href="cursos">Gestionar Cursos</a> <li><a href="cursos">Gestionar Cursos</a></li></li>
+            <li><a href="usuarios">Gestionar Usuarios</a></li>
+            <li><a href="cursos">Gestionar Cursos</a></li>
         </ul>
     </div>
-<a href="logout" class="logout-link">Cerrar Sesión</a>
 
-</body>
+    </body>
 </html>
