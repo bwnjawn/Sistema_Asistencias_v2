@@ -28,12 +28,17 @@
         </button> 
         <a href="#" class="logo-header"></a>
     </div>
-        <nav class="navegacion">
+    <nav class="navegacion">
         <a href="#">Inicio</a>
         <button class="btnLogin-popup">Ingresar</button>
     </nav>
-</header>
 
+    </header>
+
+    <div class="main-content">
+        <h1>¡Bienvenid@ a la Universidad San Sebastián!</h1>
+        <p>Educar en el cultivo de la razón y la virtud.</p>
+    </div>
     <!-- ================= ZONA DE MENSAJES (Lógica Java) ================= -->
     <!-- 
          CAMBIO 5: Bloques de Scriptlet Java (<% %>).
@@ -158,6 +163,10 @@
                 </div>
             </form>
         </div>
+    </div>
+
+    <div class="barraInf">
+        <p>&copy; 2024 Universidad San Sebastián. Todos los derechos reservados.</p>
     </div>
 
     <script src="script.js"></script>

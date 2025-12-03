@@ -37,6 +37,20 @@ header{
     z-index: 99;
 }
 
+barraInf{
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /* Usa un color de tu paleta para el fondo (usamos el color secundario como el header) */
+    background: var(--color-secundario); 
+    color: var(--color-letras); /* Color de texto (negro o el que uses) */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    z-index: 100;
+}
+
 .logo-header {
     width: 200px;
     height: 60px;
@@ -141,6 +155,33 @@ body {
     background: url('../Img/mainpagefondo.png') no-repeat; 
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+/* Estilos para el nuevo contenido y centrado del texto */
+.main-content {
+    position: absolute; /* Para que quede superpuesto al fondo, no dentro del flujo del body flex */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el elemento exactamente */
+    text-align: center;
+    color: var(--color-blanco); /* Letras blancas para contrastar con el fondo oscuro */
+    z-index: 10; /* Asegura que esté por encima del overlay y del wrapper */
+    pointer-events: none; /* Permite hacer clic a través del texto si es necesario (ej: al wrapper) */
+    width: 80%; /* Limita el ancho del texto */
+    max-width: 800px;
+}
+
+body::before {
+    content: ''; /* Obligatorio para pseudo-elementos */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Fondo negro con 40% de opacidad. Ajusta el 0.4 para más/menos oscuridad */
+    background-color: rgba(0, 29, 50, 0.4); 
+    z-index: 1; /* Asegura que la capa oscura esté por encima del fondo, pero debajo del contenido */
 }
 
 .alert {
