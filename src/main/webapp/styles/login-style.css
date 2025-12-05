@@ -377,3 +377,25 @@ body::before {
 .iniciar-registrar p a:hover{
     text-decoration: underline;
 }
+
+/* --- REGLA PARA NEUTRALIZAR EL AUTOCOMPLETADO DE CHROME/EDGE --- */
+
+/* Esta regla apunta a los inputs cuando el navegador les aplica autocompletado */
+.input-box input:-webkit-autofill,
+.input-box input:-webkit-autofill:hover,
+.input-box input:-webkit-autofill:focus,
+.input-box input:-webkit-autofill:active {
+    /* La clave: Aplicamos una sombra interna (inset) que tiene el tamaño exacto 
+       del input y el mismo color de fondo del FORMULARIO para simular la transparencia.
+       
+       El color de fondo de tu formulario interno (.form-box) es ahora el blanco var(--color-blanco) 
+       porque en un paso anterior hicimos transparente el .wrapper.
+    */
+    -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+    
+    /* Mantiene el color del texto oscuro (ajusta si usas otra variable) */
+    -webkit-text-fill-color: #162938 !important; 
+    
+    /* Para asegurar que no haya ningún otro color de fondo */
+    background-color: transparent !important; 
+}
