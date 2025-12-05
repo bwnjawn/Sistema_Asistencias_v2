@@ -39,9 +39,9 @@
         <div class="tabla-container">
             <h2>Mis Ramos Inscritos</h2>
 
-            <input type="text" id="buscador" onkeyup="filtrarTabla()" placeholder="Buscar por nombre o código..." style="padding: 10px; width: 300px; margin-bottom: 10px;">
+            <input type="text" id="buscador" onkeyup="filtrarTabla()" placeholder="Buscar por nombre o código...">
 
-            <table id="tablaCursos" border="1" cellpadding="10" style="width: 90%; margin: 0 auto;">
+            <table id="tablaCursos" cellpadding="10">
                 <thead>
                     <tr>
                         <th>Código</th>
@@ -59,17 +59,20 @@
                             <td>
                                 <c:choose>
                                     <c:when test="${curso.porcentajeAsistencia >= 80}">
-                                        <span class="bueno">APROBADO (<c:out value="${curso.porcentajeAsistencia}"/>%)</span><br> <div class="barra-fondo">
+                                        <span class="bueno">APROBADO (<c:out value="${curso.porcentajeAsistencia}"/>%)</span><br> 
+                                        <div class="barra-fondo">
                                             <div class="barra-progreso" data-ancho="${curso.porcentajeAsistencia}" style="background-color: #4CAF50;"></div>
                                         </div>
                                     </c:when>
                                     <c:when test="${curso.porcentajeAsistencia >= 75}">
-                                        <span class="limite">AL LÍMITE (<c:out value="${curso.porcentajeAsistencia}"/>%)</span><br> <div class="barra-fondo">
+                                        <span class="limite">AL LÍMITE (<c:out value="${curso.porcentajeAsistencia}"/>%)</span><br> 
+                                        <div class="barra-fondo">
                                             <div class="barra-progreso" data-ancho="${curso.porcentajeAsistencia}" style="background-color: orange;"></div>
                                         </div>
                                     </c:when>
                                     <c:otherwise>
-                                        <span class="malo">REPROBANDO (<c:out value="${curso.porcentajeAsistencia}"/>%)</span><br> <div class="barra-fondo">
+                                        <span class="malo">REPROBANDO (<c:out value="${curso.porcentajeAsistencia}"/>%)</span><br> 
+                                        <div class="barra-fondo">
                                             <div class="barra-progreso" data-ancho="${curso.porcentajeAsistencia}" style="background-color: #f44336;"></div>
                                         </div>
                                     </c:otherwise>
@@ -121,6 +124,7 @@
                         var barra = barras[i];
                         var porcentaje = barra.getAttribute('data-ancho');
                         if(porcentaje) {
+                            console.log("Aplicando ancho: " + porcentaje + "%"); // Verifica que este mensaje aparezca en la consola
                             barra.style.width = porcentaje + '%';
                         }
                     }
