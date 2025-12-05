@@ -80,36 +80,6 @@
             </table>
         </div>
     </main>
-
-    <!-- 
-    <table border="1" cellpadding="5">
-        <thead>
-            <tr>
-                <th>Código</th>
-                <th>Asignatura</th>
-                <th>Descripción</th>
-                <th>Acciones</th>
-            </tr>
-        </thead>
-        <tbody>
-            <c:forEach var="curso" items="${misCursos}">
-                <tr>
-                    <td><c:out value="${curso.codigoCurso}" /></td>
-                    <td><c:out value="${curso.nombreCurso}" /></td>
-                    <td><c:out value="${curso.descripcion}" /></td>
-                    <td>
-                        <a href="asistencia?accion=tomar&idCurso=${curso.idCurso}" class="button">Tomar Asistencia</a>
-                    </td>
-                </tr>
-            </c:forEach>
-            <c:if test="${empty misCursos}">
-                <tr>
-                    <td colspan="4" style="text-align:center;">No tienes cursos asignados actualmente.</td>
-                </tr>
-            </c:if>
-        </tbody>
-    </table>
-    -->
     <br><br>
 </body>
 </html>
