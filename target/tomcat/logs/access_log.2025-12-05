@@ -77,3 +77,17 @@
 0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:12:49 -0300] "GET /login.jsp HTTP/1.1" 200 6583 http-bio-8081-exec-3 2
 0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:12:56 -0300] "POST /auth HTTP/1.1" 302 - http-bio-8081-exec-3 1452
 0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:12:57 -0300] "GET /cursos?accion=mis_cursos HTTP/1.1" 200 3055 http-bio-8081-exec-3 1561
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:15:50 -0300] "GET / HTTP/1.1" 200 358 http-bio-8081-exec-1 60
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:15:51 -0300] "GET /login.jsp HTTP/1.1" 200 6583 http-bio-8081-exec-2 9
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:16:00 -0300] "POST /auth HTTP/1.1" 302 - http-bio-8081-exec-3 1914
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:16:01 -0300] "GET /cursos?accion=mis_cursos HTTP/1.1" 200 3055 http-bio-8081-exec-4 1498
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:22:12 -0300] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1047 http-bio-8081-exec-6 3
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:27:40 -0300] "GET /logout HTTP/1.1" 302 - http-bio-8081-exec-8 1
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:27:40 -0300] "GET /login.jsp HTTP/1.1" 200 6583 http-bio-8081-exec-9 2
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:28:15 -0300] "GET / HTTP/1.1" 200 358 http-bio-8081-exec-1 66
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:28:17 -0300] "GET /login.jsp HTTP/1.1" 200 6583 http-bio-8081-exec-2 8
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:28:24 -0300] "POST /auth HTTP/1.1" 302 - http-bio-8081-exec-3 1884
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:28:25 -0300] "GET /cursos?accion=mis_cursos HTTP/1.1" 200 3055 http-bio-8081-exec-4 1504
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:28:30 -0300] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1047 http-bio-8081-exec-5 5
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:31:14 -0300] "GET /cursos?accion=mis_cursos HTTP/1.1" 200 3055 http-bio-8081-exec-7 1585
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:16:31:24 -0300] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 1047 http-bio-8081-exec-8 1
