@@ -11,6 +11,7 @@
     </style>
 </head>
 
+
 <body class="paleta">
     <header>
         <div class="grupo-izquierda">
@@ -32,9 +33,55 @@
             <a href="cursos?accion=mis_cursos">Ver Mis Cursos</a>
         </ul>
     </div>
-    
-    <h3>Mis Cursos Asignados</h3>
 
+    <main>
+
+        <div class="contenedor-titulo">
+            <h2>Mis Cursos Asignados</h2>
+        </div>
+
+        <div class="contenedor-tabla">
+            <table class="tabla-cursos">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Asignatura</th>
+                        <th>Descripción</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <c:choose>
+                        <c:when test="${not empty misCursos}">
+                            <c:forEach var="curso" items="${misCursos}">
+                                <tr>
+                                    <td><c:out value="${curso.codigoCurso}" /></td>
+                                    <td><c:out value="${curso.nombreCurso}" /></td>
+                                    <td><c:out value="${curso.descripcion}" /></td>
+                                    <td>
+                                        <a href="asistencia?accion=tomar&idCurso=${curso.idCurso}" class="btn-accion">
+                                            Tomar Asistencia
+                                        </a>
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                        </c:when>
+                        <c:otherwise>
+                            <tr>
+                                <td colspan="4" class="celda-vacia">
+                                    No tienes cursos asignados actualmente.
+                                </td>
+                            </tr>
+                        </c:otherwise>
+                    </c:choose>
+                </tbody>
+                
+            </table>
+        </div>
+    </main>
+
+    <!-- 
     <table border="1" cellpadding="5">
         <thead>
             <tr>
@@ -62,7 +109,7 @@
             </c:if>
         </tbody>
     </table>
-    
+    -->
     <br><br>
     <a href="logout">Cerrar Sesión</a>
 </body>

@@ -166,7 +166,7 @@
     </div>
 
     <div class="barraInf">
-        <p>&copy; 2024 Universidad San Sebastián. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Universidad San Sebastián. Todos los derechos reservados.</p>
     </div>
 
     <script src="script.js"></script>

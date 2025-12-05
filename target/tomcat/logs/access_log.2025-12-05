@@ -28,3 +28,10 @@
 0:0:0:0:0:0:0:1 - - [05/Dec/2025:15:30:03 -0300] "GET /login.jsp HTTP/1.1" 200 6583 http-bio-8081-exec-7 2
 0:0:0:0:0:0:0:1 - - [05/Dec/2025:15:30:11 -0300] "POST /auth HTTP/1.1" 302 - http-bio-8081-exec-7 1400
 0:0:0:0:0:0:0:1 - - [05/Dec/2025:15:30:13 -0300] "GET /cursos?accion=mis_cursos HTTP/1.1" 200 1682 http-bio-8081-exec-7 1393
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:15:31:12 -0300] "GET /cursos?accion=mis_cursos HTTP/1.1" 200 1682 http-bio-8081-exec-7 1433
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:15:31:39 -0300] "GET /cursos?accion=mis_cursos HTTP/1.1" 200 1682 http-bio-8081-exec-7 1398
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:15:32:03 -0300] "GET /cursos?accion=mis_cursos HTTP/1.1" 200 1682 http-bio-8081-exec-8 1401
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:15:32:08 -0300] "GET /cursos?accion=mis_cursos HTTP/1.1" 200 1682 http-bio-8081-exec-8 1412
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:15:32:48 -0300] "GET /cursos?accion=mis_cursos HTTP/1.1" 200 1682 http-bio-8081-exec-8 1437
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:15:36:12 -0300] "GET /cursos?accion=mis_cursos HTTP/1.1" 200 1682 http-bio-8081-exec-4 1446
+0:0:0:0:0:0:0:1 - - [05/Dec/2025:15:36:18 -0300] "GET /cursos?accion=mis_cursos HTTP/1.1" 200 1682 http-bio-8081-exec-4 1420
