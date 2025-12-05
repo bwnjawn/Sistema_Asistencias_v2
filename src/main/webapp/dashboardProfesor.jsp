@@ -111,6 +111,5 @@
     </table>
     -->
     <br><br>
-    <a href="logout">Cerrar Sesión</a>
 </body>
 </html>
