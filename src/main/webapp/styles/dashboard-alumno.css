@@ -160,8 +160,6 @@ header{
     color: var(--color-primario);
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
     box-sizing: border-box;
 }
 
@@ -202,7 +200,7 @@ header{
 .barra-fondo { 
     background-color: #e0e0e0; 
     width: 100%; 
-    max-width: 150px;
+    max-width: 150px; 
     height: 10px; 
     display: block;
     border-radius: 5px; 
