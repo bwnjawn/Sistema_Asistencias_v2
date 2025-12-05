@@ -16,12 +16,14 @@
 
 
 .paleta {
-    --color-letras: rgb(0, 0, 0);
-    --color-primario: rgb(86, 130, 177); 
-    --color-secundario: rgb(115, 158, 201);
-    --color-fondo: rgb(252, 235, 225);
-    --color-bordeboton: rgb(27, 65, 106);
+    --color-negro: rgb(0, 0, 0);
     --color-blanco: #fff;
+    --color-gris: rgb(98,109,113);
+    --color-verde-pastel: rgb(205,205,192);
+    --color-beige: rgb(244,237,225);
+    --color-mostaza-claro: rgb(221,188,149);
+    --color-naranjo-oscuro: rgb(179,136,103);
+    --color-bordeboton: rgb(27, 65, 106);
     --color-hover: #e0e0e0; /* Gris claro para hover */
     --color-exito: #00C851; /* Verde para acciones de éxito */
 }
@@ -37,7 +39,7 @@ body {
 hr {
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-primario), rgba(0, 0, 0, 0));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-gris), rgba(0, 0, 0, 0));
     margin-bottom: 20px;
 }
 
@@ -47,7 +49,7 @@ header{
     left: 0;
     width: 100%;
     padding: 10px 40px;
-    background: var(--color-secundario);
+    background: var(--color-beige);
     display: flex;
     justify-content: space-between; 
     align-items: center;
@@ -80,7 +82,7 @@ header{
     text-decoration: none;
     color: var(--color-blanco);
     padding: 5px 15px;
-    background-color: var(--color-primario);
+    background-color: var(--color-beige);
     border-radius: 6px;
     border: 2px solid var(--color-bordeboton);
     font-weight: 600;
@@ -95,7 +97,7 @@ header{
 .mensaje-bienvenida {
     font-size: 1.2em;
     font-weight: 500;
-    color: var(--color-primario);
+    color: var(--color-verde-pastel);
     text-align: center;
 }
 
@@ -107,7 +109,7 @@ header{
 .navegacion a {
     position: relative;
     font-size: 1.1em;
-    color: var(--color-letras);
+    color: var(--color-negro);
     text-decoration: none;
     font-weight: 500;
     margin-left: 40px;
@@ -120,7 +122,7 @@ header{
     bottom: -6px;
     width: 100%;
     height: 3px;
-    background: var(--color-primario);
+    background: var(--color-verde-pastel);
     border-radius: 5px;
     transform: scaleX(0);
     transition: transform .5s;
