@@ -130,110 +130,92 @@ header{
     transform: scaleX(1);
 }
 
-main {
-    width: 95%;              /* Ocupa casi todo el ancho en móviles */
-    max-width: 1200px;       /* Pero no te pases de 1200px en monitores grandes */
-    margin: 30px auto;       /* 30px arriba/abajo, AUTO a los lados (esto lo centra) */
-    padding: 20px;           /* Espacio interno para que nada toque los bordes */
-    background-color: var(--color-blanco); /* Opcional: fondo blanco para todo el bloque */
-    border-radius: 8px;      /* Bordes redondeados para todo el contenedor */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave general */
-    min-height: 400px;       /* Altura mínima estética */
-}
-
-main h2 {
-    color: var(--color-primario);
-    margin-bottom: 25px;     /* Separación entre el título y la tabla */
-    text-align: center;      /* Título centrado */
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    border-bottom: 2px solid var(--color-secundario);
-    display: inline-block;   /* Para que el borde se ajuste al texto */
-    padding-bottom: 10px;
-    
-    /* Truco para centrar el bloque del título si usas text-align: center en el padre */
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* --- Estilos para la Tabla de Cursos --- */
-
-.contenedor-titulo {
-    text-align: center;
-    margin: 30px 0 20px 0;
-}
-
-.contenedor-tabla {
+/* --- ESTILOS DEL CONTENEDOR PRINCIPAL --- */
+.contenedor-principal {
     width: 90%;
-    margin: 0 auto; /* Centrar horizontalmente */
-    overflow-x: auto; /* Para móviles si la tabla es muy ancha */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    border-radius: 8px;
-    background-color: var(--color-blanco);
+    max-width: 1200px;
+    margin: 40px auto; /* Centrado en pantalla */
+    background-color: transparent; /* Fondo transparente para que se vea el body */
+}
+
+/* Título de la sección */
+.encabezado-seccion h2 {
+    color: var(--color-primario);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--color-secundario); /* Línea decorativa a la izquierda */
+    padding-left: 15px;
+}
+
+/* --- ESTILOS DE LA TABLA (EL ARREGLO VISUAL) --- */
+.contenedor-tabla {
+    background-color: var(--color-blanco); /* Fondo blanco CRUCIAL para contraste */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra elegante */
+    padding: 20px;
+    overflow-x: auto; /* Para móviles */
 }
 
 .tabla-cursos {
     width: 100%;
-    border-collapse: collapse;
-    font-size: 1em;
-    min-width: 600px;
+    border-collapse: collapse; /* Elimina espacios dobles entre bordes */
+    font-family: 'Raleway', sans-serif;
 }
 
+/* Encabezados de la tabla */
 .tabla-cursos thead tr {
     background-color: var(--color-primario);
     color: var(--color-blanco);
     text-align: left;
-    font-weight: bold;
 }
 
-.tabla-cursos th, 
+.tabla-cursos th {
+    padding: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+/* Celdas del cuerpo */
 .tabla-cursos td {
-    padding: 12px 15px;
+    padding: 15px;
+    border-bottom: 1px solid #eee; /* Línea gris suave separadora */
+    color: #333;
+    vertical-align: middle;
 }
 
-.tabla-cursos tbody tr {
-    border-bottom: 1px solid #dddddd;
-    transition: background-color 0.2s ease;
-}
-
-/* Color alternado para filas (efecto cebra suave) */
-.tabla-cursos tbody tr:nth-of-type(even) {
-    background-color: #f8f9fa; 
-}
-
-/* Efecto Hover al pasar el mouse */
+/* Efecto al pasar el mouse por la fila */
 .tabla-cursos tbody tr:hover {
-    background-color: var(--color-hover);
-    cursor: default;
+    background-color: #f1f7fc; /* Un azul muy pálido al pasar el mouse */
 }
 
-/* Estilo para cuando no hay datos */
-.celda-vacia {
-    text-align: center;
-    padding: 30px;
-    color: var(--color-secundario);
-    font-style: italic;
-}
-
-/* --- Botón de Acción en la Tabla --- */
+/* --- BOTÓN VERDE "TOMAR ASISTENCIA" --- */
 .btn-accion {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 8px 15px;
+    background-color: var(--color-exito); /* Tu variable verde */
+    color: white;
     text-decoration: none;
-    background-color: var(--color-exito); /* Usando tu variable verde */
-    color: var(--color-blanco);
-    border-radius: 4px;
-    font-size: 0.9em;
-    font-weight: 600;
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .btn-accion:hover {
-    background-color: #00a342; /* Un verde un poco más oscuro */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    transform: translateY(-2px); /* Pequeña elevación */
+    background-color: #00a342; /* Verde más oscuro */
+    transform: translateY(-2px); /* Se eleva un poco */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Mensaje vacío */
+.celda-vacia {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+    padding: 30px;
 }
 
 .alert {

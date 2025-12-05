@@ -158,17 +158,16 @@ body {
     position: relative;
 }
 
-/* Estilos para el nuevo contenido y centrado del texto */
 .main-content {
-    position: absolute; /* Para que quede superpuesto al fondo, no dentro del flujo del body flex */
+    position: absolute; 
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centra el elemento exactamente */
+    transform: translate(-50%, -50%); 
     text-align: center;
-    color: var(--color-blanco); /* Letras blancas para contrastar con el fondo oscuro */
-    z-index: 100; /* Asegura que esté por encima del overlay y del wrapper */
-    pointer-events: none; /* Permite hacer clic a través del texto si es necesario (ej: al wrapper) */
-    width: 80%; /* Limita el ancho del texto */
+    color: var(--color-blanco); 
+    z-index: 100; 
+    pointer-events: none;
+    width: 80%;
     max-width: 800px;
 }
 

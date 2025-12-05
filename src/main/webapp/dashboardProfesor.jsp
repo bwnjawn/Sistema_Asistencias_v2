@@ -34,9 +34,9 @@
         </ul>
     </div>
 
-    <main>
-
-        <div class="contenedor-titulo">
+    <main class="contenedor-principal">
+        
+        <div class="encabezado-seccion">
             <h2>Mis Cursos Asignados</h2>
         </div>
 
@@ -56,7 +56,7 @@
                         <c:when test="${not empty misCursos}">
                             <c:forEach var="curso" items="${misCursos}">
                                 <tr>
-                                    <td><c:out value="${curso.codigoCurso}" /></td>
+                                    <td><strong><c:out value="${curso.codigoCurso}" /></strong></td>
                                     <td><c:out value="${curso.nombreCurso}" /></td>
                                     <td><c:out value="${curso.descripcion}" /></td>
                                     <td>
