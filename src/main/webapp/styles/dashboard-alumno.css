@@ -141,38 +141,57 @@ header{
 /* --- ESTILOS DE TABLA Y BARRAS --- */
 
 /* Contenedor principal de la tabla para centrar */
-.tabla-container {
+.contenido-ramos {
     width: 90%;
     max-width: 1000px;
-    margin: 30px auto; /* Centrar y dar espacio */
+    margin: 30px auto;
     padding: 20px;
-    background-color: var(--color-blanco);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    background-color: transparent; 
+}
+
+.tabla-container {
+    border-radius: 0;
+    padding: 0;
+    overflow-x: auto;
+    background-color: transparent;
 }
 
 .tabla-container h2 {
     color: var(--color-primario);
-    text-align: center;
-    margin-bottom: 20px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#buscador {
+    width: 99%;
+    padding: 10px;
+    max-width: 900px;
+    margin-bottom: 15px;
 }
 
 #tablaCursos {
     width: 100%;
     border-collapse: collapse; /* Para que los bordes sean simples */
-    text-align: left;
+    font-family: 'Raleway', sans-serif;
 }
 
-#tablaCursos th, #tablaCursos td {
-    padding: 12px 15px;
-    border: 1px solid #ddd; /* Borde simple para separar celdas */
+#tablaCursos th,
+#tablaCursos td {
+    padding: 15px;
+    text-align: left; 
+    background-color: var(--color-blanco);
+    border-bottom: 1px solid var(--color-secundario); 
+    border-right: 1px solid var(--color-primario);
+    vertical-align: middle;
 }
 
 #tablaCursos th {
-    background-color: var(--color-secundario);
+    background-color: var(--color-primario);
     color: var(--color-blanco);
     font-weight: 600;
-    text-transform: uppercase;
 }
 
 /* Estilos de la barra de progreso */
@@ -183,18 +202,18 @@ header{
 .barra-fondo { 
     background-color: #e0e0e0; 
     width: 100%; 
-    max-width: 150px; 
+    max-width: 150px;
     height: 10px; 
-    display: inline-block; 
+    display: block;
     border-radius: 5px; 
     overflow: hidden;
-    vertical-align: middle;
-    margin-left: 10px;
+    margin-top: 5px;
 }
+
 .barra-progreso { 
     height: 100%; 
+    width: 0%;
     border-radius: 5px; 
-    width: 0%; 
     transition: width 0.5s ease-in-out; 
 }
 
