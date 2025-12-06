@@ -89,8 +89,7 @@ public class AsistenciaServlet extends HttpServlet {
                 }
                 
                 request.setAttribute("misCursos", misCursos);
-                request.setAttribute("mostrarRamos", true);
-                request.getRequestDispatcher("dashboardAlumno.jsp").forward(request, response);
+                request.getRequestDispatcher("alumno-mis-ramos.jsp").forward(request, response);
             } else {
                 response.sendRedirect("login.jsp");
             }

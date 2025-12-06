@@ -80,14 +80,15 @@
                         </c:if>
                     </tbody>
                 </table>
+
+                <div class="form-actions" style="margin-top: 20px;">
+                    <c:if test="${not empty listaAlumnos}">
+                        <button type="submit" class="btn-accion btn-guardar">Guardar Asistencia</button>
+                    </c:if>
+                </div>
             </form>
         </div>
-
         <br>
-        <c:if test="${not empty listaAlumnos}">
-            <input type="submit" value="Guardar Asistencia" class="btn-accion btn-guardar">
-        </c:if>
-        
     </div>
 </body>
 </html>
