@@ -20,7 +20,7 @@
         </div>
 
         <div class="grupo-derecha">
-            <a href="dashboardAlumno.jsp">Volver a mis ramos</a>
+            <a href="dashboardAlumno.jsp" class="button-volver">Volver a mis ramos</a>
         </div>
     </header>
 
@@ -29,41 +29,86 @@
     </div>
     <hr>
 
-    <label>Filtrar por fecha: </label>
-    <input type="date" id="filtroFecha" onchange="filtrarFecha()">
-    <button onclick="document.getElementById('filtroFecha').value=''; filtrarFecha();">Limpiar Filtro</button>
-    <br><br>
-
-    <table id="tablaAsistencia" border="1" cellpadding="10" style="width: 60%;">
-        <thead>
-            <tr>
-                <th>Fecha</th>
-                <th>Estado</th>
-            </tr>
-        </thead>
-        <tbody>
-            <c:forEach var="item" items="${historial}">
+    <div class="contenido-ramos">
+        <div class="tabla-container">
+            <h2>Detalle de Clases</h2>
+            <div class="filtros-container">
+                <label for="filtroFecha" style="color: var(--color-primario); font-weight: 500;">Filtrar por fecha:</label>
+                <input type="date" id="filtroFecha" onchange="filtrarFecha()">
+                <button onclick="document.getElementById('filtroFecha').value=''; filtrarFecha();">Limpiar Filtro</button>
+            </div>
+            
+            <table id="tablaAsistencia" cellpadding="10"><thead>
                 <tr>
-                    <td><fmt:formatDate value="${item.fecha}" pattern="dd/MM/yyyy" /></td>
-                    <td>
-                        <c:choose>
-                            <c:when test="${item.estado == 'Presente'}">
-                                <span class="presente">PRESENTE</span>
-                            </c:when>
-                            <c:otherwise>
-                                <span class="ausente">AUSENTE</span>
-                            </c:otherwise>
-                        </c:choose>
-                    </td>
+                    <th>Fecha</th>
+                    <th>Estado</th>
                 </tr>
-            </c:forEach>
-            <c:if test="${empty historial}">
-                <tr><td colspan="2">No hay registros de asistencia para este curso.</td></tr>
-            </c:if>
-        </tbody>
-    </table>
+            </thead>
+
+            <tbody>
+                <c:forEach var="item" items="${historial}">
+                    <tr>
+                        <td><fmt:formatDate value="${item.fecha}" pattern="dd/MM/yyyy" /></td>
+
+                        <td>
+                            <c:choose>
+                                <c:when test="${item.estado == 'Presente'}">
+                                    <span class="presente">PRESENTE</span>
+                                </c:when>
+                                <c:otherwise>
+                                    <span class="ausente">AUSENTE</span>
+                                </c:otherwise>
+                            </c:choose>
+                        </td>
+                    </tr>
+                </c:forEach>
+
+                <c:if test="${empty historial}">
+                    <tr><td colspan="2" style="text-align:center;">No hay registros de asistencia para este curso.</td></tr>
+                </c:if>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+    function filtrarFecha() {
+        var input = document.getElementById("filtroFecha").value; // Formato yyyy-mm-dd
+        // // Convertimos al formato de la tabla dd/mm/yyyy
+        if(input) {
+            var partes = input.split("-");
+            // Usa parseInt para asegurar que el día y mes no tengan ceros al inicio (opcional pero más robusto)
+            var dia = partes[2];
+            var mes = partes[1];
+            var anio = partes[0];
+            // Asegúrate de que el formato coincida EXACTAMENTE con JSTL (dd/MM/yyyy)
+            var fechaBuscada = dia + "/" + mes + "/" + anio;
+            
+            var tabla = document.getElementById("tablaAsistencia");
+            var tr = tabla.getElementsByTagName("tr");
+            
+            for (var i = 1; i < tr.length; i++) {
+                var tdFecha = tr[i].getElementsByTagName("td")[0];
+                if (tdFecha) {
+                    var textoFecha = tdFecha.textContent || tdFecha.innerText;
+                    if (textoFecha === fechaBuscada) {
+
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        } else {
+            var tabla = document.getElementById("tablaAsistencia");
+            var tr = tabla.getElementsByTagName("tr");
+            for (var i = 1; i < tr.length; i++) {
+                tr[i].style.display = "";
+            }
+        }
+    }
+    </script>
 </body>
 </html>
+
 
 <!--
 <script>
