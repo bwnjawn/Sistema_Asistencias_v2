@@ -7,48 +7,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Detalle Asistencia</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        function filtrarFecha() {
-            var input = document.getElementById("filtroFecha").value; // Formato yyyy-mm-dd
-            // Convertimos al formato de la tabla dd/mm/yyyy
-            if(input) {
-                var partes = input.split("-");
-                var fechaBuscada = partes[2] + "/" + partes[1] + "/" + partes[0];
-                
-                var tabla = document.getElementById("tablaAsistencia");
-                var tr = tabla.getElementsByTagName("tr");
-                
-                for (var i = 1; i < tr.length; i++) {
-                    var tdFecha = tr[i].getElementsByTagName("td")[0];
-                    if (tdFecha) {
-                        var textoFecha = tdFecha.textContent || tdFecha.innerText;
-                        if (textoFecha === fechaBuscada) {
-                            tr[i].style.display = "";
-                        } else {
-                            tr[i].style.display = "none";
-                        }
-                    }
-                }
-            } else {
-                // Si borran la fecha, mostramos todo
-                var tabla = document.getElementById("tablaAsistencia");
-                var tr = tabla.getElementsByTagName("tr");
-                for (var i = 1; i < tr.length; i++) {
-                    tr[i].style.display = "";
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="styles/AlumnoHistorial.css">
     <style>
-        .presente { color: green; font-weight: bold; }
-        .ausente { color: red; font-weight: bold; }
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); 
     </style>
 </head>
-<body>
-    <h2>Asistencia: <c:out value="${nombreCurso}" /></h2>
-    <a href="asistencia?accion=mis_ramos">Volver a mis ramos</a>
-    <br><br>
+
+<body class="paleta">
+    <header>
+        <div class="grupo-izquierda">
+            <a href="#" class="logo-header"></a>
+        </div>
+
+        <div class="grupo-derecha">
+            <a href="dashboardAlumno.jsp">Volver a mis ramos</a>
+        </div>
+    </header>
+
+    <div class="mensaje-bienvenida">
+        <h2> Asistencia: <c:out value="${nombreCurso}"/></h2>
+    </div>
+    <hr>
 
     <label>Filtrar por fecha: </label>
     <input type="date" id="filtroFecha" onchange="filtrarFecha()">
@@ -85,3 +64,42 @@
     </table>
 </body>
 </html>
+
+<!--
+<script>
+        function filtrarFecha() {
+            var input = document.getElementById("filtroFecha").value; // Formato yyyy-mm-dd
+            // Convertimos al formato de la tabla dd/mm/yyyy
+            if(input) {
+                var partes = input.split("-");
+                var fechaBuscada = partes[2] + "/" + partes[1] + "/" + partes[0];
+                
+                var tabla = document.getElementById("tablaAsistencia");
+                var tr = tabla.getElementsByTagName("tr");
+                
+                for (var i = 1; i < tr.length; i++) {
+                    var tdFecha = tr[i].getElementsByTagName("td")[0];
+                    if (tdFecha) {
+                        var textoFecha = tdFecha.textContent || tdFecha.innerText;
+                        if (textoFecha === fechaBuscada) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+            } else {
+                // Si borran la fecha, mostramos todo
+                var tabla = document.getElementById("tablaAsistencia");
+                var tr = tabla.getElementsByTagName("tr");
+                for (var i = 1; i < tr.length; i++) {
+                    tr[i].style.display = "";
+                }
+            }
+        }
+    </script>
+    <style>
+        .presente { color: green; font-weight: bold; }
+        .ausente { color: red; font-weight: bold; }
+    </style>
+-->
