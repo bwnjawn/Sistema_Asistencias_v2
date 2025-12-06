@@ -385,7 +385,8 @@ body::before {
 .input-box input:-webkit-autofill:focus,
 .input-box input:-webkit-autofill:active {
 
-    -webkit-box-shadow: 0 0 0 30px #fff inset !important;
+    /* 💡 CORRECCIÓN: Se usa 'transparent' para evitar el fondo blanco/amarillo */
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
     -webkit-text-fill-color: #162938 !important; 
     background-color: transparent !important; 
 }

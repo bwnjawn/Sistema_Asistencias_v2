@@ -89,7 +89,10 @@ public class AsistenciaServlet extends HttpServlet {
                 }
                 
                 request.setAttribute("misCursos", misCursos);
-                request.getRequestDispatcher("alumno-mis-ramos.jsp").forward(request, response);
+                // CORRECCIÓN 1.A (Previa): Añadir este atributo para que la tabla se muestre en el JSP
+                request.setAttribute("mostrarRamos", true); 
+                // CORRECCIÓN 1.B (Previa): Cambiar la ruta al JSP correcto
+                request.getRequestDispatcher("dashboardAlumno.jsp").forward(request, response);
             } else {
                 response.sendRedirect("login.jsp");
             }
@@ -135,6 +138,9 @@ public class AsistenciaServlet extends HttpServlet {
             asistenciaDAO.registrar(idCurso, alumno.getIdUsuario(), fecha, estado);
         }
         
-        response.sendRedirect("dashboardProfesor.jsp");
+        // 🎉 CORRECCIÓN FINAL (Problema del Profesor):
+        // Redirigimos al Servlet de Cursos con la acción 'mis_cursos' para que 
+        // recargue la lista de ramos del profesor antes de mostrar el dashboard.
+        response.sendRedirect("cursos?accion=mis_cursos");
     }
 }

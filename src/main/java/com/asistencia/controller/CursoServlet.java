@@ -7,8 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession; // Importante
-import com.asistencia.model.Usuario;   // Importante
+import javax.servlet.http.HttpSession; 
+import com.asistencia.model.Usuario;   
 
 import com.asistencia.dao.CursoDAO;
 import com.asistencia.model.Curso;
@@ -44,7 +44,7 @@ public class CursoServlet extends HttpServlet {
                 response.sendRedirect("cursos");
                 break;
             
-            // --- NUEVO CASO PARA EL PROFESOR ---
+            // --- CASO PARA EL PROFESOR ---
             case "mis_cursos":
                 HttpSession session = request.getSession();
                 Usuario u = (Usuario) session.getAttribute("usuario");
@@ -53,7 +53,8 @@ public class CursoServlet extends HttpServlet {
                 if (u != null && u.getIdRol() == 2) {
                     List<Curso> misCursos = cursoDAO.listarPorProfesor(u.getIdUsuario());
                     request.setAttribute("misCursos", misCursos);
-                    request.getRequestDispatcher("dashboardProfesor.jsp").forward(request, response);
+                    // El profesor es redirigido a su dashboard que luego muestra la tabla
+                    request.getRequestDispatcher("dashboardProfesor.jsp").forward(request, response); 
                 } else {
                     response.sendRedirect("login.jsp");
                 }
@@ -86,6 +87,17 @@ public class CursoServlet extends HttpServlet {
             curso.setIdCurso(id);
             cursoDAO.update(curso);
         }
-        response.sendRedirect("cursos");
+        
+        // CORRECCIÓN 2: Redirección dinámica por Rol
+        HttpSession session = request.getSession(false);
+        Usuario u = (session != null) ? (Usuario) session.getAttribute("usuario") : null;
+
+        if (u != null && u.getIdRol() == 2) { 
+            // Si es un profesor, redirigir a su lista de cursos para recargar el dashboard
+            response.sendRedirect("cursos?accion=mis_cursos");
+        } else {
+            // Si es un administrador (o si el rol es desconocido/nulo), redirigir al listado general
+            response.sendRedirect("cursos");
+        }
     }
 }
