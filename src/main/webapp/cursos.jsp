@@ -25,7 +25,6 @@
         </div>
 
         <div class="grupo-derecha">
-            <a href="logout" class="btn-logout">Cerrar Sesión</a>
         </div>
     </header>
 
@@ -48,7 +47,6 @@
             
             <div class="navegacion">
                 <a href="cursos?accion=nuevo" class="btn-accion btn-marcar">➕ Agregar Nuevo Curso</a>
-                <a href="dashboardAdmin.jsp" class="button-volver">Volver al Dashboard</a>
             </div>
             
             <table id="tablaCursos" cellpadding="10">

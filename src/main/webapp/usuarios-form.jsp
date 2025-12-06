@@ -5,46 +5,82 @@
 <head>
     <meta charset="UTF-8">
     <title>${usuario != null ? 'Editar Usuario' : 'Nuevo Usuario'}</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/usuario-form.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'); 
+    </style>
 </head>
-<body>
-    <h2>
+<body class="paleta">
+    <header>
+        <div class="grupo-izquierda">
+            <a href="#" class="logo-header"></a>
+        </div>
+
+        <div class="grupo-derecha">
+            <a href="dashboardProfesor.jsp" class="button-volver">Volver al Dashboard</a>
+        </div>
+    </header>
+
+    <div class="mensaje-bienvenida">
+        <h2>
         <c:if test="${usuario != null}">Editar Usuario</c:if>
         <c:if test="${usuario == null}">Nuevo Usuario</c:if>
-    </h2>
+        </h2>
+    </div>
+    <hr>
 
-    <form action="usuarios" method="post">
-        
-        <c:if test="${usuario != null}">
-            <input type="hidden" name="accion" value="actualizar" />
-            <input type="hidden" name="id" value="${usuario.idUsuario}" />
-        </c:if>
-        <c:if test="${usuario == null}">
-            <input type="hidden" name="accion" value="insertar" />
-        </c:if>
+    <div class="contenido-ramos">
+        <div class="tabla-container form-card">
+            <form action="usuarios" method="post">
+                
+                <c:if test="${usuario != null}">
+                    <input type="hidden" name="accion" value="actualizar" />
+                    <input type="hidden" name="id" value="${usuario.idUsuario}" />
+                </c:if>
+                <c:if test="${usuario == null}">
+                    <input type="hidden" name="accion" value="insertar" />
+                </c:if>
 
-        <label>RUT:</label><br>
-        <input type="text" name="rut" value="${usuario.rut}" required /><br><br>
+                <div class="form-group">
+                    <label for="rut">RUT:</label>
+                    <input type="text" id="rut" name="rut" value="${usuario.rut}" required />
+                </div>
 
-        <label>Nombre:</label><br>
-        <input type="text" name="nombre" value="${usuario.nombre}" required /><br><br>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" value="${usuario.nombre}" required />
+                </div>
 
-        <label>Apellido:</label><br>
-        <input type="text" name="apellido" value="${usuario.apellido}" required /><br><br>
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido" value="${usuario.apellido}" required />
+                </div>
 
-        <label>Email:</label><br>
-        <input type="email" name="email" value="${usuario.email}" required /><br><br>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="${usuario.email}" required />
+                </div>
 
-        <label>Contraseña:</label><br>
-        <input type="text" name="password" value="${usuario.password}" required /><br><br>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="text" id="password" name="password" value="${usuario.password}" required />
+                </div>
 
-        <label>Rol (1=Admin, 2=Profe, 3=Alumno):</label><br>
-        <input type="number" name="idRol" value="${usuario.idRol}" required /><br><br>
-
-        <button type="submit">Guardar</button>
-    </form>
-    
-    <br>
-    <a href="usuarios">Volver a la lista</a>
+                <div class="form-group">
+                    <label for="idRol">Rol (1=Admin, 2=Profe, 3=Alumno):</label>
+                    <input type="number" id="idRol" name="idRol" value="${usuario.idRol}" required />
+                </div>
+                
+                <div class="form-actions">
+                    <%-- Usamos la clase del botón de guardar de asistencia --%>
+                    <button type="submit" class="btn-accion btn-guardar">Guardar Usuario</button>
+                </div>
+            </form>
+            
+            <div class="acciones-footer">
+                <a href="usuarios" class="link-cancelar">Volver a la lista</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
